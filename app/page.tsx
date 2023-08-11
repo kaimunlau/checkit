@@ -1,39 +1,25 @@
-import Card from '@/components/ui/Card'
+import Current from '@/components/Current'
+import DateLocation from '@/components/DateLocation'
+import Footer from '@/components/Footer'
+import Forecast from '@/components/Forecast'
+import Header from '@/components/Header'
+import Linkback from '@/components/Linkback'
+import Search from '@/components/Search'
+import WeatherAlert from '@/components/WeatherAlert'
 
 export default function Home() {
     return (
         <div className='flex min-h-screen flex-col'>
-            <header className='border-b p-2'>
-                <h1>Check.it</h1>
-            </header>
+            <Header />
             <main>
-                <Card className='my-8'>Search for location</Card>
-                <Card className='flex justify-around'>
-                    <p>Mon. 10 June</p>
-                    <p>Lyon</p>
-                </Card>
-                <Card className='flex justify-around'>
-                    <p>icon</p>
-                    <p>28.5ºc</p>
-                </Card>
-                <Card className='flex justify-around'>
-                    <div>
-                        <p>date</p>
-                        <p>icon</p>
-                    </div>
-                    <div>
-                        <p>date</p>
-                        <p>icon</p>
-                    </div>
-                    <div>
-                        <p>date</p>
-                        <p>icon</p>
-                    </div>
-                </Card>
-                <Card>Weather alert!</Card>
-                <Card className='my-8'>Data provided by WeatherAPI</Card>
+                <Search />
+                <DateLocation />
+                <Current />
+                <Forecast />
+                <WeatherAlert />
+                <Linkback />
             </main>
-            <footer></footer>
+            <Footer />
         </div>
     )
 }
